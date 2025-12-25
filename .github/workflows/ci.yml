@@ -17,4 +17,4 @@ jobs:
           python-version: '3.x'
 
       - name: Intentional failure (learning)
-        run: exit 1
+        run: exit 0
