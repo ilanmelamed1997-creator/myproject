@@ -2,13 +2,12 @@ name: CI
 
 on:
   push:
-    branches:
-      - feature/my-second-change
   pull_request:
 
 jobs:
   test:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
 
@@ -17,5 +16,5 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Run app
-        run: python app.py
+      - name: Intentional failure (learning)
+        run: exit 1
